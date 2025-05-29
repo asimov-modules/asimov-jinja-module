@@ -4,7 +4,12 @@
 [![Compatibility](https://img.shields.io/badge/rust-1.85%2B-blue)](https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/)
 [![Package](https://img.shields.io/crates/v/asimov-jinja-module)](https://crates.io/crates/asimov-jinja-module)
 
-[ASIMOV] module for prompt templating using the Jinja templating engine.
+[ASIMOV] module for prompt templating using the [Jinja] templating language.
+
+## ✨ Features
+
+- Renders JSON inputs using the [MiniJinja] templating engine.
+- Loads environment variables from `.env` (aka dotenv) files.
 
 ## 🛠️ Prerequisites
 
@@ -20,9 +25,17 @@ cargo install asimov-jinja-module
 
 ## 👉 Examples
 
+### Rendering from JSON to Markdown
+
 ```bash
-asimov-jinja-runner
+asimov-jinja-runner template.j2 < input.json > output.md
 ```
+
+## 📚 Reference
+
+### Installed Binaries
+
+- `asimov-jinja-runner`: renders JSON from standard input to standard output
 
 ## 👨‍💻 Development
 
@@ -39,3 +52,5 @@ git clone https://github.com/asimov-modules/asimov-jinja-module.git
 [![Share on LinkedIn](https://img.shields.io/badge/share%20on-linkedin-3949AB?logo=linkedin)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/asimov-modules/asimov-jinja-module)
 
 [ASIMOV]: https://github.com/asimov-platform
+[Jinja]: https://en.wikipedia.org/wiki/Jinja_(template_engine)
+[MiniJinja]: https://crates.io/crates/minijinja
