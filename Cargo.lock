@@ -29,25 +29,24 @@ name = "asimov-jinja-module"
 version = "0.1.0"
 dependencies = [
  "asimov-module",
- "clientele",
  "colored_json",
  "minijinja",
  "serde",
  "serde_json",
- "tracing",
- "tracing-subscriber",
 ]
 
 [[package]]
 name = "asimov-module"
-version = "25.0.0-dev.8"
+version = "25.0.0-dev.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6f87c6daf2d26e98e8ab8c69fa546e9aeaf2161362a85fa9a087ea2e86c2fb97"
+checksum = "da934541da6a3d15df0ab5205ca5baccc71283a5663958582eb9f89d8bdb984a"
 dependencies = [
+ "clientele",
  "dogma",
  "getenv",
  "secrecy",
  "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]

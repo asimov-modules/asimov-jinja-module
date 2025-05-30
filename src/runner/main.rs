@@ -1,26 +1,26 @@
 // This is free and unencumbered software released into the public domain.
 
 #[cfg(feature = "std")]
-fn main() -> Result<clientele::SysexitsError, Box<dyn std::error::Error>> {
-    use clientele::SysexitsError::*;
+fn main() -> Result<asimov_module::SysexitsError, Box<dyn std::error::Error>> {
+    use asimov_module::SysexitsError::*;
     use minijinja::{Environment, UndefinedBehavior};
     use serde_json::Value;
     use std::io::stdin;
 
     // Load environment variables from `.env`:
-    clientele::dotenv().ok();
+    asimov_module::dotenv().ok();
 
     // Expand wildcards and @argfiles:
-    let args = clientele::args_os()?;
+    let args = asimov_module::args_os()?;
     if args.len() < 2 {
         return Ok(EX_USAGE);
     }
 
-    // Configure tracing & logging:
+    // Configure logging & tracing:
     #[cfg(feature = "tracing")]
-    tracing_subscriber::fmt()
+    asimov_module::tracing_subscriber::fmt()
         .with_writer(std::io::stderr)
-        .with_max_level(tracing_subscriber::filter::LevelFilter::WARN)
+        .with_max_level(asimov_module::tracing_subscriber::filter::LevelFilter::WARN)
         .init();
 
     // Define the template environment:
