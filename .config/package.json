@@ -1,0 +1,16 @@
+{
+  "name": "asimov-jinja-module",
+  "version": "0.0.0",
+  "description": "ASIMOV module for prompt templating using the Jinja templating language.",
+  "keywords": ["asimov-module", "asimov", "ai"],
+  "homepage": "https://github.com/asimov-modules",
+  "bugs": "https://github.com/asimov-modules/asimov-jinja-module/issues",
+  "license": "Unlicense",
+  "author": "ASIMOV Protocol <support@asimov.so> (https://github.com/asimov-protocol)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asimov-modules/asimov-jinja-module.git"
+  },
+  "files": ["AUTHORS", "CHANGES.md", "README.md", "UNLICENSE", "VERSION"],
+  "main": "index.js"
+}

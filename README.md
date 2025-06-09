@@ -4,6 +4,7 @@
 [![Package on Crates.io](https://img.shields.io/crates/v/asimov-jinja-module.svg)](https://crates.io/crates/asimov-jinja-module)
 [![Package on PyPI](https://img.shields.io/pypi/v/asimov-jinja-module.svg)](https://pypi.org/project/asimov-jinja-module)
 [![Package on RubyGems](https://img.shields.io/gem/v/asimov-jinja-module.svg)](https://rubygems.org/gems/asimov-jinja-module)
+[![Package on NPM](https://img.shields.io/npm/v/asimov-jinja-module.svg)](https://npmjs.com/package/asimov-jinja-module)
 
 [ASIMOV] module for prompt templating using the [Jinja] templating language.
 
@@ -29,6 +30,12 @@ pip install -U asimov-jinja-module
 
 ```bash
 gem install asimov-jinja-module
+```
+
+### Installation from NPM
+
+```bash
+npm install -g asimov-jinja-module
 ```
 
 ### Installation from Source Code
@@ -68,6 +75,7 @@ git clone https://github.com/asimov-modules/asimov-jinja-module.git
 [ASIMOV]: https://github.com/asimov-platform
 [Jinja]: https://en.wikipedia.org/wiki/Jinja_(template_engine)
 [MiniJinja]: https://crates.io/crates/minijinja
+[NPM]: https:/npmjs.org
 [Python]: https://python.org
 [Ruby]: https://ruby-lang.org
 [Rust]: https://rust-lang.org
