@@ -10,5 +10,6 @@ links:
   - https://rubygems.org/gems/asimov-jinja-module
   - https://npmjs.com/package/asimov-jinja-module
 
-flows:
-  - asimov-jinja-runner
+provides:
+  flows:
+    - asimov-jinja-runner
