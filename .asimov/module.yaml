@@ -1,0 +1,14 @@
+# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+---
+name: jinja
+label: Jinja
+summary: Prompt templating using the Jinja templating language.
+links:
+  - https://github.com/asimov-modules/asimov-jinja-module
+  - https://crates.io/crates/asimov-jinja-module
+  - https://pypi.org/project/asimov-jinja-module
+  - https://rubygems.org/gems/asimov-jinja-module
+  - https://npmjs.com/package/asimov-jinja-module
+
+flows:
+  - asimov-jinja-runner
