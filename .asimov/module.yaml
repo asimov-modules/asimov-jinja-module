@@ -1,4 +1,4 @@
-# See: https://github.com/asimov-modules/asimov-template-module/blob/master/.asimov/module.yaml
+# See: https://asimov-specs.github.io/module-manifest/
 ---
 name: jinja
 label: Jinja
@@ -11,5 +11,5 @@ links:
   - https://npmjs.com/package/asimov-jinja-module
 
 provides:
-  flows:
+  programs:
     - asimov-jinja-runner
