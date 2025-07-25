@@ -3,7 +3,7 @@
 [package]
 name = "asimov-jinja-module"
 version = "0.1.3"
-authors = ["ASIMOV Protocol <support@asimov.so>"]
+authors = ["ASIMOV Community"]
 edition = "2024"
 #rust-version = "1.85"
 description = "ASIMOV module for prompt templating using the Jinja templating language."
@@ -24,23 +24,39 @@ publish = true
 
 [features]
 default = ["all", "cli", "std"]
-all = ["tracing"]
-cli = ["asimov-module/cli", "pretty", "std"]
-std = ["asimov-module/std", "minijinja/std_collections", "serde/std"]
-tracing = ["asimov-module/tracing"]
+all = ["pretty", "tracing"]
+cli = ["asimov-module/cli", "std", "dep:clap", "dep:clientele"]
+std = [
+    "asimov-module/std",
+    "clap?/std",
+    "clientele?/std",
+    "minijinja/std_collections",
+    "serde/std",
+]
 unstable = []
 
+# Optional features:
 pretty = ["dep:colored_json"]
+tracing = ["asimov-module/tracing", "clientele?/tracing"]
 
 [dependencies]
-asimov-module = { version = "25.0.0-dev.9", default-features = false }
-colored_json = { version = "5", default-features = false, optional = true }
+asimov-module = { version = "25.0.0-dev.17", default-features = false }
 minijinja = { version = "2.10", default-features = false, features = [
     "loader",
     "serde",
 ] }
 serde = { version = "1", default-features = false, features = ["derive"] }
 serde_json = { version = "1", default-features = false, features = ["alloc"] }
+
+# Optional integrations:
+clap = { version = "4.5", default-features = false, features = [
+    "std",
+], optional = true }
+clientele = { version = "0.3.8", default-features = false, features = [
+    "clap",
+    "std",
+], optional = true }
+colored_json = { version = "5", default-features = false, optional = true }
 
 [profile.release]
 opt-level = "z"
