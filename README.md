@@ -27,6 +27,8 @@
 asimov module install jinja -v
 ```
 
+<img width="100%" alt="Installation with the ASIMOV CLI" src="https://github.com/asimov-modules/asimov-jinja-module/raw/master/etc/install.svg"/>
+
 ### Installation from PyPI
 
 ```bash
